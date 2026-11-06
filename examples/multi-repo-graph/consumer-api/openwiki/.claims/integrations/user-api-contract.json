@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f05f77778af6cfc5d58e5eb43ca758a820c0e5eef47b77e6425f81a108e9afb1",
+  "claims": [
+    {
+      "id": "claim_c0d0a1822d3745ed906f26091c7c16ca",
+      "statement": "The consumer depends on an external User API producer whose base URL is configured through `user.api.base-url`, defaulting to `http://localhost:8080` in `application.properties`.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L28",
+          "version": "repo-lines-v1:sha256:63b5a530b6d2044b799caa39637c7d5ae19c122dec4a3254452f7ce7fd744dee:eyJzZWxlY3RlZExpbmVDb3VudCI6MjgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxNmY4Y2ZkNTdiMDNlYjM3NmNjNmI2MjM2NzBjMzcwYzA0MjYyYzc1YjI3NGM0OWUyYmVlZjgyMjA2MDRlMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImUyODg4M2ZjNWI5ZDk4ODI0ZWNlODJmNzcyZWQ2ZWJhYzU1ZTg1MWFkM2QyNmZlNWExNmEwMTA5ZmI3NjU5OGQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImZhODA2NjRmZTRmMmZjMjZmOWMzZDczMTI1NTAwYWI1M2U5ZDcyMTc4NjkyZWFhNTAyM2ZlNmZlZDM1ZTc4ZTkifQ"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L5",
+          "version": "repo-lines-v1:sha256:6e973357ea7577f53e669bae1168288d34ab598a6fa6b3447c74c6f652f20209:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGJjNzQ0YjQ1ZTBkMDBjODMyZWUzOGVhMzBiNTcyNTYyMmZmM2I3OTJjMmVjZmI2ZGUyNGQyZWFjM2Q4ZDc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxMzVjNWYxODRjZDQwMGNkNzBhODA2MThkMjAwNWViNTE3ZDE4ZjhmNTAxMWU3MzhiOTRiY2NiODVkNDA0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_69d0f8ad63dc464481202d9e35008c04",
+      "statement": "`UserApiClient` is the dedicated outbound integration boundary and issues fixed requests against the configured base URL for collection reads, item reads, create, update, delete, deactivate, and activate operations.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L14-L89",
+          "version": "repo-lines-v1:sha256:c96f8ada51385ef69cdd78553385177bd5ab26972fb70de5b91ce147c7e37f6a:eyJzZWxlY3RlZExpbmVDb3VudCI6NzYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImYxZmZmYzUyOTgwY2VjZjM0ODJhZTRhZDRlZTQ2NWY4OTJkM2U1MDhkNGJmMzlhMDIwY2I2MGM5ZmE5N2QxZDAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZTg4OGZjYjRkMDgwMjNlMjFhZmZlYzYxZDg2MTFkM2JjNzNjZWMzZjZkMzE5NDE0NTVlODc4NzdiZjFhMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjE2MjE3YjJiZGYxZWE3Mzg0ZjRjZWZiNDM2ZDVjZjI1M2UxYmRmYWQwNTBjMThhOWIzNjc2MWU5ZjE2MTM2MjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxNmNlNjA0ZjQzYTQxZWJlMzE2NDZjNjYzOTk5OTZjN2NmM2IyNmM0NWZlZGFhNTE2OTc1YWJhNTgwZDQ3ZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_3d9340f3513c4a48bc7a12ad530e3c7b",
+      "statement": "The consumer invokes `GET /api/users` and `GET /api/users/active` as collection reads, deserializing each response body into `List<User>` via `RestTemplate.exchange(...)` and `ParameterizedTypeReference<List<User>>() {}`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L25-L42",
+          "version": "repo-lines-v1:sha256:010156933032e2bde09998a2bd18eba758a9efec0de5a801e111db1a5820741a:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMGY0NTI1OWMwY2YzN2M0MzgwMDU2NjcwMTk1MzVjMjFkZTQxNjJlNTFkODZmMWEzZTY3OTdlYTZhYmMxMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlMTYzOTQzZWQ1ODQzMDkwMzMxYjM0ODBhZGNjOGU0YmFiZGQ2YmQxYmQyMjlkNGUzMTgzZjc1NmYyN2FkNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjkxMjBkODIwYmZiM2E0NzljMDg4NzAwYTk2MmFhNGIwNzRmNjU2ZDVlNTcyODE4NGE1MzNiZWRlZTc3YmQwMmEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_7212573565334d4eba7518c0c88b7b25",
+      "statement": "The consumer reads individual users with `GET /api/users/{id}` and `GET /api/users/username/{username}`, both via `RestTemplate.getForObject(...)` into `User`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L44-L57",
+          "version": "repo-lines-v1:sha256:c3bc17a50e06b5b495527a268da4278d0c1b85aefad9b360907a64f5d2ab6dcb:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQwNzNlOGQyZWRiNDRiYzM4Y2ExYWY0YzkwM2Y5MGU0ZTBmZTA3ODEwOGNlMzBkZGQ1OThiNDRjYTczNDYyYjMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjMyOTlkYzQ5MmJlYWU1OWMxNjg0ODg0ZjA2ZDM4YjE0NmIxZDcwNDA3NmEyODkwOWRjYWQyYWFmYjU5OTc3YWUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0Yzk2ODI0MWY2MmEzZTdkN2ZiOTljZmQxMGExNTBlNmU3Nzg4MDA1MzZmOWM1NzFhY2MxYTZlOGYxNWUyOTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_71635ef78ebb42539a5ac6e89ca77472",
+      "statement": "The consumer creates users with `POST /api/users` and expects a `User` response, while update and delete use `PUT /api/users/{id}` and `DELETE /api/users/{id}` without inspecting a response body.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L59-L76",
+          "version": "repo-lines-v1:sha256:589917a56587868d803611ed8981d13e6dd35c2fc10eabcf8d03e66c2eeb3f86:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjRhNTg1OTRiZDRjOTk1Yjg4Y2NjOWE3ZDViNzVlZGY4ZTEyMDlkZjQ3MDA4MWNlZmQ1Y2VhNmU2NDM2ZmVmNTQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjkyYWIwOTY1NTdiMDhhNzllYWJlZGVkNzIzYTRjNWMwZTRmYWViNDY4YjM3MGU1OTkxZjVjNWQzM2Q1ODg4OGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjgxYzQ5ZGY4MDI2ZWY3Y2NiYzcwZWVkZDlmMjk4OGY3NWZlM2VhMjY4ODk2NTM4NTQ3MDJjNjBjMmE0NDk3OTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5af3657a068844388c6ae24c806203c5",
+      "statement": "The consumer activates and deactivates users with `PATCH /api/users/{id}/activate` and `PATCH /api/users/{id}/deactivate`, sending `null` bodies and ignoring any returned content.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L78-L89",
+          "version": "repo-lines-v1:sha256:8c50e0205eb1c4fe89a230ea4f489d28ff082b95e90f6d427b038cf5c65a0f76:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkMDdmMjYyYzQyOWRkYTExZmNmZWQwMzRkNzJmNDg0Nzc0Mjk4YjRiN2EyMmNhMDc5ZWZjYjY3Y2U4MzZhYmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjdjZTg4OGZjYjRkMDgwMjNlMjFhZmZlYzYxZDg2MTFkM2JjNzNjZWMzZjZkMzE5NDE0NTVlODc4NzdiZjFhMjQiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjI1YTI4NWE4NTJlNTNiMDk3MDNjMjdmN2FmZDkyZTllNGMwNDZlYWUzZTc4MGU0YjRkYzgyYTNiYmI3NjE0ZmYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxNmNlNjA0ZjQzYTQxZWJlMzE2NDZjNjYzOTk5OTZjN2NmM2IyNmM0NWZlZGFhNTE2OTc1YWJhNTgwZDQ3ZTAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_815c07ccc49547b1ac5ce7d00413edf4",
+      "statement": "The client does not implement explicit null or empty guards for remote responses; collection reads return `response.getBody()` directly and the single-item reads delegate missing-response behavior to Spring's `RestTemplate` methods.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L25-L57",
+          "version": "repo-lines-v1:sha256:0c1b23b6431ba604a742a4ee5d9f3df36d64379537839b98c800441d852ac9e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMGY0NTI1OWMwY2YzN2M0MzgwMDU2NjcwMTk1MzVjMjFkZTQxNjJlNTFkODZmMWEzZTY3OTdlYTZhYmMxMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlMTYzOTQzZWQ1ODQzMDkwMzMxYjM0ODBhZGNjOGU0YmFiZGQ2YmQxYmQyMjlkNGUzMTgzZjc1NmYyN2FkNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0Yzk2ODI0MWY2MmEzZTdkN2ZiOTljZmQxMGExNTBlNmU3Nzg4MDA1MzZmOWM1NzFhY2MxYTZlOGYxNWUyOTYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_58200e96e6ce42cca040e484010ab1a5",
+      "statement": "The consumer assumes the producer returns plain `User` objects and JSON arrays of `User` for these endpoints, rather than a paged wrapper or another envelope shape.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L25-L57",
+          "version": "repo-lines-v1:sha256:0c1b23b6431ba604a742a4ee5d9f3df36d64379537839b98c800441d852ac9e4:eyJzZWxlY3RlZExpbmVDb3VudCI6MzMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjhhMGY0NTI1OWMwY2YzN2M0MzgwMDU2NjcwMTk1MzVjMjFkZTQxNjJlNTFkODZmMWEzZTY3OTdlYTZhYmMxMmYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImJlMTYzOTQzZWQ1ODQzMDkwMzMxYjM0ODBhZGNjOGU0YmFiZGQ2YmQxYmQyMjlkNGUzMTgzZjc1NmYyN2FkNzAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6Ijc0Yzk2ODI0MWY2MmEzZTdkN2ZiOTljZmQxMGExNTBlNmU3Nzg4MDA1MzZmOWM1NzFhY2MxYTZlOGYxNWUyOTYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.3",
+    "at": "2026-11-04T17:34:57.507Z"
+  }
+}

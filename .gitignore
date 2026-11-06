@@ -1,0 +1,42 @@
+# Project config with secrets — never commit the real file, only the .example
+openwiki-graph.toml
+
+# Local design / scratch notes
+design.md
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+env/
+
+# Test, type-checking, and linting output
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.mypy_cache/
+.pyright/
+.ruff_cache/
+.tox/
+.nox/
+pip-wheel-metadata/
+
+# Extraction checkpoints
+.openwiki-graph/
+
+# Misc
+.DS_Store
+Thumbs.db
+.env
+*.log
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo

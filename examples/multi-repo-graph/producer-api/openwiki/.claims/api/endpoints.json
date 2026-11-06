@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:a35cf9ee3c5cd9f2283c58bb12b52b5427cc363ce94be767424d7c10cc7e055c",
+  "claims": [
+    {
+      "id": "claim_1c9bff9a28a94927915642682bd52b45",
+      "statement": "All user endpoints are mounted under /api/users, served on port 8080 by default.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/controller/UserController.java#L13-L14",
+          "version": "repo-lines-v1:sha256:935a9db9de69c4feeff3c0c933263bdeb3411a2041d591dc785a5d3eaa948dcb:eyJzZWxlY3RlZExpbmVDb3VudCI6MiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYTg3MGVlYzY0M2E2Y2MxNzg3MjcyOTdhNTViNmY5Zjc2MTc0NzM1M2VkZDY0MzVlOWIxMTFkZTFhZmEwMjRjOSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOGIzOThmNmE4NTQ1ZTlhZjdhMmNkMmUxN2Y4NjI2YjhiMjc4YmM2OGIwZWU0MGJiOTQ4ZWE5ZDgzN2RmZGYyYyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYjMwNTliZjEwNTZlZGY0MmE2Mzg0ODNmNjljNDk1YzZlMmU1OGVjMjNiYjE0NTMxNGYyZmU1MDI1MzVlNmM5NiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiODc1NGRjYTJkZWJkM2Q3MTliMzk2OTNkM2YyMzdhOGVkNTg2YTcyODllMjY3MTdmNzA4MjgzMTJiNTliZGM2MSJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L1",
+          "version": "repo-lines-v1:sha256:31efeb783903a3a459a07f0fc59c900bc2f77a49297e5f4cadf89d7e1fc7fc16:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzFlZmViNzgzOTAzYTNhNDU5YTA3ZjBmYzU5YzkwMGJjMmY3N2E0OTI5N2U1ZjRjYWRmODlkN2UxZmM3ZmMxNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzFlZmViNzgzOTAzYTNhNDU5YTA3ZjBmYzU5YzkwMGJjMmY3N2E0OTI5N2U1ZjRjYWRmODlkN2UxZmM3ZmMxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWI1ZTMyYzQzMGI2ZmE1MWZhYmQzN2VhOGViY2Y1ZDk2ZjQzYjI5NTU2ZTQ5M2E2MjBlNTI3NTZkOGI0NmQwYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_993d0342f666490bae383e002f797a62",
+      "statement": "POST /api/users enforces @Valid constraints: username must be non-blank, email must be non-blank and well-formed; fullName is optional.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/controller/UserController.java#L46-L46",
+          "version": "repo-lines-v1:sha256:2c7b3cd4c1e93250bf46d850d990f7dca1e2c7d7f529918eb5c1de28c22ac85f:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM3YjNjZDRjMWU5MzI1MGJmNDZkODUwZDk5MGY3ZGNhMWUyYzdkN2Y1Mjk5MThlYjVjMWRlMjhjMjJhYzg1ZiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMmM3YjNjZDRjMWU5MzI1MGJmNDZkODUwZDk5MGY3ZGNhMWUyYzdkN2Y1Mjk5MThlYjVjMWRlMjhjMjJhYzg1ZiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzlhODczMDc2NjFiZGE1Y2ExMDk2Mjc2OGZmYjE5YjZiZTRlOTViM2U3YTc3NDJjNjY3MTg5MDZhM2QxMTg3OCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYWY0MGY0ZjE3Mjg0M2M2MmI2ZDY2NTQxYjRiZjZhM2UzYWM0YzA0Y2YzZDIyZTg2YjhlMzY4NmJhMDljOWU1YSJ9"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/userapi/model/User.java#L12-L16",
+          "version": "repo-lines-v1:sha256:8651cb53227ea4666ba5a2df970cf68f4519605eeeb437e3a1870551c05e9a44:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNhZDhlODUzNDlmZTExODE5ODg1OTc2ZWY5NmNiZTNmNmY2NWMyODhiMjkwNzEzYWNhZGJkZjlhOTI4MDM4OCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNjNhZDhlODUzNDlmZTExODE5ODg1OTc2ZWY5NmNiZTNmNmY2NWMyODhiMjkwNzEzYWNhZGJkZjlhOTI4MDM4OCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiODE2NDA2YTI4ZGZhNjMxYmYxNjMxN2JjZWE5MWNkNTk3MTI0MDU1MjZhODExNzAwODFiMzY3NzUyMzU5ZDc4OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNmY4ZjQxOGEzNzZjZDFkOTM5NDAzZDhlYWZjY2M5NGI5YzkzN2Q0ODM0YjkxOTcyNGFkOTY5MzJiODU3NjhiYiJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a77df1e6ad9d4b31ba6b936d3ebef229",
+      "statement": "PUT /api/users/{id} is a full replacement but preserves the existing record's id and createdAt regardless of request body values.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L48-L57",
+          "version": "repo-lines-v1:sha256:5681c437ffe375be0904ba36fa8d20eee289880d38bc38db63b428d1619c7436:eyJzZWxlY3RlZExpbmVDb3VudCI6MTAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNlNzE5ZTEwYzJlMzdlNjY4ZGU4Yjg3OTMxMzY5N2YxZjg0NmUyZDM1NzE1N2RhMjczMjE2MDYwZWViODkwOWUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ0MzJhM2ZiNzAxMWViMDMwMjhkNGQyYjM2NTU2ZTY4NmNiYmE0MTQwYjUwYTkzMzMwNDk5NjY1ZGQ0OTI1YzciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJlOTk3ODdkOTAyZWI4M2NkYzJhOWQxNGRhODhkYWVlMzA5YWU2OTNhMzdiYmI1MTU2NDMwNGZhMmYyNTY4ZDIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI0MDVjMjNlNThiOTk0YjBiN2ZlMjlkYzIwNGI3NThhODlkZWM2Y2MyOGY3ZWY4NDJhOTk5YjJkZGE3YTNkNzUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cd31c9676f0444968c41f35f2dfe6cd3",
+      "statement": "PATCH /api/users/{id}/deactivate and /activate toggle the active flag in-place without removing the record; both return 404 when the user is not found.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/controller/UserController.java#L69-L85",
+          "version": "repo-lines-v1:sha256:99c6d0a10e3b61172b24dfaa5ea4b838f759d70982daa07f2339ebde04e869db:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAwM2RlOGYwYzlhNTUyMzNjNjZkY2U1ZGFjOTNjMDlmMGRlODQwMjdhNDNkZmQ2NjcwZjlmNjBiODE5MDlkNjciLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNhYzZlNGYwOTZkYWQ4YTYzNGQ0MDAxN2Q3MTNjMGNjNjgwZjJhNmU4Y2YwYjQ1ZTRiOTFiN2NkNDllZGU4MmUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L63-L79",
+          "version": "repo-lines-v1:sha256:88518c3c26f1a316163d826e96be99ac49c905def030749349e7a1cd561835c5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2ODliMWFkMjExMzU3MzRjNzIwNGFiYTUwYWRhMTg4ZmZmMWExZWRlOGMwNDk5MmY0Y2NkNWVjOTc5YmI1MzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjNTM4ZWMzZTU0YjgyZGI0OGUzYzM4YzhmNjQ1YzEyOTM0MWJhOGI0Y2I2YzNkYzljZGU0NmE5YTUzNTQyYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTRkMDJhODEyMTk0NGQxNzZkMjY1ZTliYjljYzU5ZjZhYjg5MGJjYWRmOGFlZmRlYmRiYmI0ZjJlYTg0NDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_b2e7e09c96e8444e9fbf2d7823a1d3d7",
+      "statement": "DELETE /api/users/{id} permanently removes the user from the in-memory store and returns 204 on success or 404 when not found.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/controller/UserController.java#L61-L67",
+          "version": "repo-lines-v1:sha256:c389cd7761ace7ab02b43641914426bb5e0e224bcfb8e58905fadd3ee9456403:eyJzZWxlY3RlZExpbmVDb3VudCI6NywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiZGZhNDI0MDE0OThjNWI0ZjhlNGM4ODkyYzIxN2Q3YWM5NDYyMDFiNGMyNWE0YTY5ZDU2ODdkMGQzZWU0NzUxMiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMzZhZTYwMjBjZTI4NzEyYWNiNTM0Mjc3NDA4YTEwZTMyYmY0YTNiOTk3ZGYwYTQxNmQzMzk4NGQ2ZGU3MTZhMCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMDE2M2Q2YjYwNDk1YmE1ZWFlZmIyYTdmZDRmZTczZjBlMTYzNjhiMmVlZWZhZDFkZDkzZTFhZTk5YTZjODM4MyJ9"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L60-L62",
+          "version": "repo-lines-v1:sha256:0c538ec3e54b82db48e3c38c8f645c129341ba8b4cb6c3dc9cde46a9a53542c9:eyJzZWxlY3RlZExpbmVDb3VudCI6MywiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiYzFlOWQzM2JjYTc3NWFmNzI0MmE5ZTQ5ZTllY2VkZmYxY2I0ZWUzOWU2OWNmNzNhOGJlOGQyOWI3MTdjMzEwNSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTYxYTAxOWFiNGUyYWM1MWEyMTBmOTdhNWE3OTE1NGVmZDdkNDgyMWY4MGViYjAwMGJjODFmN2I5NDhiNjc2NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNWQxZThjYTZhOWQ2ZWM0YTc3NTQxZjc5YjQyYjNjNTVkMjE0MGQ2YjBmOTg1OTc2NTVjZDRjMGUwNTFlYTZiMyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-02T03:32:07.279Z"
+  }
+}

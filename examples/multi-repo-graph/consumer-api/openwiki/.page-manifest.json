@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/architecture/application-overview.md": {
+      "pageVersion": "sha256:ea5c5f76dc41f5321fb03ed6f1fec85b88a4c48a8b7ef4ce56cdfab56d43b80f",
+      "completedBy": "openwiki/0.7.3",
+      "completedRunId": "42f956b8-1f52-4394-9f36-fb2a3f91c439",
+      "gitHead": "c1228ed9872c1acb9faf55bc2d3485bf9521736b",
+      "sourceFingerprint": "sha256:187afda380a2ca8165714e3ffecd9b52a2bc42787d739db0e81b45b4d3f963c7"
+    },
+    "/openwiki/concepts/user-domain.md": {
+      "pageVersion": "sha256:46f4cf007c830d1190a403bd7ff36128d5d7fd6a05ae46db546c9a40e058da54",
+      "completedBy": "openwiki/0.7.3",
+      "completedRunId": "42f956b8-1f52-4394-9f36-fb2a3f91c439",
+      "gitHead": "c1228ed9872c1acb9faf55bc2d3485bf9521736b",
+      "sourceFingerprint": "sha256:187afda380a2ca8165714e3ffecd9b52a2bc42787d739db0e81b45b4d3f963c7"
+    },
+    "/openwiki/integrations/user-api-contract.md": {
+      "pageVersion": "sha256:f05f77778af6cfc5d58e5eb43ca758a820c0e5eef47b77e6425f81a108e9afb1",
+      "completedBy": "openwiki/0.7.3",
+      "completedRunId": "42f956b8-1f52-4394-9f36-fb2a3f91c439",
+      "gitHead": "c1228ed9872c1acb9faf55bc2d3485bf9521736b",
+      "sourceFingerprint": "sha256:187afda380a2ca8165714e3ffecd9b52a2bc42787d739db0e81b45b4d3f963c7"
+    },
+    "/openwiki/operations/configuration-and-runtime.md": {
+      "pageVersion": "sha256:be8ce60a1e6206648d8e787cf85811b989951051fd943f61e3fcecdd977e440a",
+      "completedBy": "openwiki/0.7.3",
+      "completedRunId": "42f956b8-1f52-4394-9f36-fb2a3f91c439",
+      "gitHead": "c1228ed9872c1acb9faf55bc2d3485bf9521736b",
+      "sourceFingerprint": "sha256:187afda380a2ca8165714e3ffecd9b52a2bc42787d739db0e81b45b4d3f963c7"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:f6b81c8fdca9d45dd8cb60f5ac202ad9af8dbe035048321a68a9b6fab4a0306a",
+      "completedBy": "openwiki/0.7.3",
+      "completedRunId": "42f956b8-1f52-4394-9f36-fb2a3f91c439",
+      "gitHead": "c1228ed9872c1acb9faf55bc2d3485bf9521736b",
+      "sourceFingerprint": "sha256:187afda380a2ca8165714e3ffecd9b52a2bc42787d739db0e81b45b4d3f963c7"
+    },
+    "/openwiki/workflows/demo-execution.md": {
+      "pageVersion": "sha256:3f518da86f2045c5b9a8f5948b68cdc39c83c548f911a1158c9f65cd6c250014",
+      "completedBy": "openwiki/0.7.3",
+      "completedRunId": "42f956b8-1f52-4394-9f36-fb2a3f91c439",
+      "gitHead": "c1228ed9872c1acb9faf55bc2d3485bf9521736b",
+      "sourceFingerprint": "sha256:187afda380a2ca8165714e3ffecd9b52a2bc42787d739db0e81b45b4d3f963c7"
+    }
+  }
+}

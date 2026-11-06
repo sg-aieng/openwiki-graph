@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:ea5c5f76dc41f5321fb03ed6f1fec85b88a4c48a8b7ef4ce56cdfab56d43b80f",
+  "claims": [
+    {
+      "id": "claim_bf351145f6cc4262946abdc18bdd00e6",
+      "statement": "The application is a Spring Boot command-line consumer that starts from `ConsumerApplication`, exposes a shared `RestTemplate` bean, and wires the runner, service, and HTTP client through the application context.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/ConsumerApplication.java#L1-L18",
+          "version": "repo-lines-v1:sha256:85859f6790ccb3554ea1569b69b7c75992546b0276e4f6bfa59dc913044dac6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NmMxYzQ0ZjQ5YjgyNWRjNTc4YmY3Y2QyMWE5YmZlMTBkOTk0NTk0MjdjZGFiMmM2Njk3MGQwODEwNzY2YzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L1-L92",
+          "version": "repo-lines-v1:sha256:a6c13c540ec8d005ca26f2144cc1d8c754afe667f73ae42ff546480cc6a2a477:eyJzZWxlY3RlZExpbmVDb3VudCI6OTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyYTA2NjVkOTIxYjMyNDliZGY4NmU4MjhhMzhlODc1YmQwYThhZDYzMDM4OTQyZjY2Njg3MWNlNjExZWNmMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L1-L59",
+          "version": "repo-lines-v1:sha256:979b4b1bff40b988dd0c809d775819f19833a5306e8bee44e19329c4d8dabc43:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxNjE4NzNkMzc0OWE1MzA0MWM4Y2M5Yjc2ODU3OGY2MTlhMmU2YWQxYzA2MWI1NTAxYjMxODgzMThlMDlmNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L1-L86",
+          "version": "repo-lines-v1:sha256:c0275cdf375abde4d25e46fef09ed372a37a15723245d2efb66712e1364e95b3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyZjZjZDIyMzEwN2NjMmViMjM3MjQ0YTBkMzkyMWI1MTY3NDI3ZDc0MzgxNjg3ZDU1MGJkYmJhODEzMzkxNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_5a55d5db8b4a47e38689483febf7a543",
+      "statement": "`DemoRunner` is a `CommandLineRunner` that executes automatically after startup and drives the demo workflow by calling the user-management service in a fixed sequence.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L1-L59",
+          "version": "repo-lines-v1:sha256:979b4b1bff40b988dd0c809d775819f19833a5306e8bee44e19329c4d8dabc43:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImQxNjE4NzNkMzc0OWE1MzA0MWM4Y2M5Yjc2ODU3OGY2MTlhMmU2YWQxYzA2MWI1NTAxYjMxODgzMThlMDlmNmEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_70d6073c1fd445cba5ef875c9dea2d87",
+      "statement": "`UserManagementService` is the application layer above the HTTP client: it delegates remote work, prints console sections, and performs small local derivations such as filtering email domains and counting active users.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L1-L86",
+          "version": "repo-lines-v1:sha256:c0275cdf375abde4d25e46fef09ed372a37a15723245d2efb66712e1364e95b3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyZjZjZDIyMzEwN2NjMmViMjM3MjQ0YTBkMzkyMWI1MTY3NDI3ZDc0MzgxNjg3ZDU1MGJkYmJhODEzMzkxNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_aaf2f45f50cb471d9ce29c2926ad71b3",
+      "statement": "`UserApiClient` is the dedicated integration boundary to the external User API, reads `user.api.base-url` from configuration, and issues HTTP calls to the producer's user endpoints for listing, lookup, create, update, delete, activate, and deactivate operations.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L1-L92",
+          "version": "repo-lines-v1:sha256:a6c13c540ec8d005ca26f2144cc1d8c754afe667f73ae42ff546480cc6a2a477:eyJzZWxlY3RlZExpbmVDb3VudCI6OTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyYTA2NjVkOTIxYjMyNDliZGY4NmU4MjhhMzhlODc1YmQwYThhZDYzMDM4OTQyZjY2Njg3MWNlNjExZWNmMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_8732cbd57c3241719c937eb66591cc9b",
+      "statement": "The consumer does not own user persistence or server-side user state; it depends on the external User API producer for all user data and mutations and uses the returned `User` model only as a transport object.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L1-L92",
+          "version": "repo-lines-v1:sha256:a6c13c540ec8d005ca26f2144cc1d8c754afe667f73ae42ff546480cc6a2a477:eyJzZWxlY3RlZExpbmVDb3VudCI6OTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjkyYTA2NjVkOTIxYjMyNDliZGY4NmU4MjhhMzhlODc1YmQwYThhZDYzMDM4OTQyZjY2Njg3MWNlNjExZWNmMDEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/model/User.java#L1-L80",
+          "version": "repo-lines-v1:sha256:5ffc92277fc63f8ce67b6633d67de07f3d97097076833d04a4c513b836c6819d:eyJzZWxlY3RlZExpbmVDb3VudCI6ODAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NjFlYjAzNGYwYjk2OGYzMTRiZTFhODhjYTI5MDk4NTE4MmI0NzBhZTJhMzU4OWUyYjdhNDdlMGU4NzFjN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L1-L86",
+          "version": "repo-lines-v1:sha256:c0275cdf375abde4d25e46fef09ed372a37a15723245d2efb66712e1364e95b3:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQyZjZjZDIyMzEwN2NjMmViMjM3MjQ0YTBkMzkyMWI1MTY3NDI3ZDc0MzgxNjg3ZDU1MGJkYmJhODEzMzkxNjAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cddab779fbb0485ca757e727bed184ce",
+      "statement": "The shared `User` model carries identity, profile, timestamp, and active-state fields, and it includes a convenience constructor for create and update flows plus a console-friendly `toString()`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/model/User.java#L1-L80",
+          "version": "repo-lines-v1:sha256:5ffc92277fc63f8ce67b6633d67de07f3d97097076833d04a4c513b836c6819d:eyJzZWxlY3RlZExpbmVDb3VudCI6ODAsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA3NjFlYjAzNGYwYjk2OGYzMTRiZTFhODhjYTI5MDk4NTE4MmI0NzBhZTJhMzU4OWUyYjdhNDdlMGU4NzFjN2MiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.3",
+    "at": "2026-11-04T17:34:57.507Z"
+  }
+}

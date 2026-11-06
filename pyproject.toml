@@ -1,0 +1,32 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "openwiki-graph"
+version = "0.1.0"
+description = "Convert OpenWiki pages into a queryable knowledge graph using graphrag-toolkit"
+requires-python = ">=3.10"
+dependencies = [
+    "graphrag-lexical-graph>=3.19",
+    "llama-index-core",
+    "PyYAML>=6",
+    "click>=8",
+    "tomli>=2; python_version<'3.11'",
+]
+
+[project.optional-dependencies]
+neo4j    = ["neo4j"]
+pgvector = ["psycopg2-binary", "pgvector"]
+openai   = ["llama-index-llms-openai", "llama-index-embeddings-openai"]
+ollama   = ["llama-index-llms-ollama", "llama-index-embeddings-ollama"]
+dev      = ["pytest", "pytest-cov"]
+
+[project.scripts]
+openwiki-graph = "openwiki_graph.cli:cli"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"openwiki_graph.graph.skills" = ["*.md"]

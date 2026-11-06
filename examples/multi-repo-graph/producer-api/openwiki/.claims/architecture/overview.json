@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:99b01bee5429edbf9917f3b082f277bfbe319cc0ed27182b3cfbcf5acf976464",
+  "claims": [
+    {
+      "id": "claim_eccb624a8a6640cea7c1bd1674917dd6",
+      "statement": "UserController is the sole HTTP entry point, delegates all logic to UserService with no business logic of its own, and uses ResponseEntity to translate service return values to HTTP status codes.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/controller/UserController.java#L1-L86",
+          "version": "repo-lines-v1:sha256:ad5bc1f36077b9c2aa798c161271c1216063bd5b91716dbd2bbf050666006304:eyJzZWxlY3RlZExpbmVDb3VudCI6ODYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImEwMThmMDA5YWEwZDRkZjgwM2JjNjY3MTdiOTAxYTEzYmQ4ZGNjZmRiZGEwYzMzYzdlOTJlMGRiOTA3NTkzYzMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_dbc686f719a04b63b8ab2830e9b26c37",
+      "statement": "UserService stores all users in a ConcurrentHashMap<Long, User> and assigns IDs via an AtomicLong starting at 1; all state is in-process and lost on restart.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L12-L15",
+          "version": "repo-lines-v1:sha256:1c6542e41e312045b3134b7011a4a0348b840123479a5ed53f382ef76b2d2782:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMDdlZTczMTY1NDgyYzAzOGQwZDZjZDNkY2NkNWE0MjE4M2U5MjliYTk0YjdhMTczOTViMjllZDM1YmM2ZDY1NCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiOThhMDkzOTRjZjlmNWQ2NWNiZTk1YjhiODQ1MzJhZWRmOTkzMmQ2ZjlkMjg0ZmRhNjhiYjY1OTI2MTZkZDA1NCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2M4ZWRlOTc1OGIzODRiZmEwNmU5YjViNzUzMzkyYzcwOWY1ZDIxYjAwODI5YWM0YTE5MzA5YTE4ZWU5YjUyNyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_407f0ba2f2dd42d082f9772ad00e670b",
+      "statement": "On startup, UserService seeds three users (admin, john_doe, jane_smith) by calling createUser from its constructor.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L16-L20",
+          "version": "repo-lines-v1:sha256:df9c17a954d526f7122ed485202d7db61ef2d1fd8d32826c83e7c394b7af4822:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWNlOTNiNmU0N2QzNTZiNjE4NDgwZDZlMWJiNjNjNmRmNTRhNTYyOTJhMTkwZGIyMjZmODg5MjAzZjE3NWNiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTAzYjQ1YjhiNjNhMDAzY2VkYzhhZDhiYTRjMzZhMDY1ZTYxZGMxMjE0OWNiYWFkZGZkOTMwZDVkOThjNGE3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzIyODhmMGM0Y2FiNmVkNzFhMmQwNGJmNDJkYjBmMWE0N2U4Mzg5ZTAyOTkyNDM1NGNjYjZkMmY3ZDE1ZTZlNCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_dc1a2ea1a70a48ec87de3c65c2b44ed9",
+      "statement": "Read-modify-write operations such as deactivateUser (get then mutate field) are not atomically protected, meaning concurrent updates to the same user can interleave.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L63-L79",
+          "version": "repo-lines-v1:sha256:88518c3c26f1a316163d826e96be99ac49c905def030749349e7a1cd561835c5:eyJzZWxlY3RlZExpbmVDb3VudCI6MTcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6Ijg2ODliMWFkMjExMzU3MzRjNzIwNGFiYTUwYWRhMTg4ZmZmMWExZWRlOGMwNDk5MmY0Y2NkNWVjOTc5YmI1MzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjBjNTM4ZWMzZTU0YjgyZGI0OGUzYzM4YzhmNjQ1YzEyOTM0MWJhOGI0Y2I2YzNkYzljZGU0NmE5YTUzNTQyYzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoyLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjM3OTRkMDJhODEyMTk0NGQxNzZkMjY1ZTliYjljYzU5ZjZhYjg5MGJjYWRmOGFlZmRlYmRiYmI0ZjJlYTg0NDQifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_99f348bc2e3441a5ba99cc6233b1bf79",
+      "statement": "The project targets Java 17 and Spring Boot 3.2, packaged as a fat JAR via spring-boot-maven-plugin with embedded Tomcat from spring-boot-starter-web.",
+      "evidence": [
+        {
+          "resource": "repo://pom.xml#L16-L52",
+          "version": "repo-lines-v1:sha256:46bf06caa1e447f25be741dddde83f67624b195e8e889cbb4cc44eb890d29037:eyJzZWxlY3RlZExpbmVDb3VudCI6MzcsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0YzI1YWVlZDkyYTBhNzM2YzNhNDg3MDlhMDRkYmYxN2JjZTM0NDYyODg4MmNkNGM5N2MwOTZhMjVmN2ZlOGEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjNiZjVhZDE2NWQ1MTc5ZjhhYTIyNmNlZTMzZDI2ZDJhYjMxYTliY2EzZDdlNDVhOTFiMWFmZWIzMDg1YWM1OWEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjcwYjFjNjdjZmU5MTMzNGE1NmRlOGEzZjhjODE1NWU5Mzc2MzJiNTc5YzViMzNhZGZjOTFmYjIyNjAxYjkwMDgiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjI2ZTMyYTMwZjNmMjBiYmM4MmY1YzUzZDQ4MDg4M2RhODk0OWQwYWJhYTllZGQwNWFkMzJjZDdhYzRlMjc5ZTcifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-02T03:32:07.279Z"
+  }
+}

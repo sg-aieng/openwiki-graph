@@ -1,0 +1,88 @@
+# openwiki-graph.toml — copy this file to openwiki-graph.toml and fill in values.
+# The actual openwiki-graph.toml is gitignored so secrets stay off version control.
+
+[wiki]
+# Path to the directory that contains OpenWiki Markdown pages.
+root = "openwiki"
+
+# Root of the repository being documented (used by the pipeline command to run
+# `openwiki code --update`). Overridable at runtime with --repo-root CLI flag.
+# repo_root = "/path/to/my-repo"
+
+# Namespace prefix for multi-repo graphs. When multiple repositories share one
+# graph, set a unique id per repo (e.g. "producer-api") so doc_ids from
+# different repos never collide. Leave blank for single-repo setups.
+# Overridable at runtime with --wiki-id CLI flag.
+# id = "producer-api"
+
+[stores]
+# Graph store connection string.
+# Overridable at runtime with --graph-store CLI flag.
+#
+# Neo4j (local):     bolt://user:password@localhost:7687
+# Neo4j (Aura):      bolt+s://user:password@xxxxx.databases.neo4j.io:7687
+# Neptune (IAM):     bolt://neptune.cluster.us-east-1.neptune.amazonaws.com:8182
+graph = "bolt://localhost:7687"
+
+# Vector store connection string.
+# Overridable at runtime with --vector-store CLI flag.
+#
+# pgvector:          postgresql://user:password@localhost:5432/mydb
+# OpenSearch:        opensearch+https://user:password@localhost:9200
+# Neptune Analytics: neptune-graph://your-graph-id.us-east-1.neptune.amazonaws.com
+vector = "postgresql://user:password@localhost:5432/mydb"
+
+[llm]
+# LLM provider for extraction and querying.
+# Supported: bedrock (default, requires AWS), openai, ollama (local, free)
+provider = "openai"
+
+# LLM model — any model the provider supports. Leave blank to use the
+# provider's own default.
+#
+# bedrock examples:  us.anthropic.claude-sonnet-4-6
+#                    us.anthropic.claude-haiku-4-5
+#                    us.amazon.nova-pro-v1:0
+# openai examples:   gpt-4o  gpt-4o-mini  gpt-4-turbo
+# ollama examples:   llama3.2  mistral  gemma3  phi4
+model = "gpt-4o-mini"
+
+# Embedding model — any embedding model the provider supports. Leave blank
+# to use the provider's own default.
+#
+# bedrock examples:  amazon.titan-embed-text-v2:0
+#                    cohere.embed-english-v3
+# openai examples:   text-embedding-3-small  text-embedding-3-large
+#                    text-embedding-ada-002
+# ollama examples:   nomic-embed-text  mxbai-embed-large  all-minilm
+embed_model = "text-embedding-3-small"
+
+# base_url — ollama only, when not running on localhost
+# base_url = "http://myhost:11434"
+
+# ── LLM credentials (set in your shell, not here) ─────────────────────────────
+# AWS Bedrock:  export AWS_DEFAULT_REGION=us-east-1 && export AWS_PROFILE=...
+# OpenAI:       export OPENAI_API_KEY=sk-...
+# Ollama:       no credentials needed
+
+[indexing]
+# Directory for extraction checkpoint files (resumable indexing).
+extraction_dir = ".openwiki-graph"
+
+# SentenceSplitter fallback settings — used when a Markdown section exceeds
+# the token limit after MarkdownNodeParser splits by headers.
+# Overridable at runtime with --chunk-size / --chunk-overlap CLI flags.
+chunk_size    = 512
+chunk_overlap = 50
+
+[pipeline]
+# When true, the pipeline command always does a full drop-and-rebuild of the
+# graph instead of an incremental update. Equivalent to passing --full-rebuild
+# on the CLI every time.
+full_rebuild = false
+
+# When true, the pipeline command skips the deletion reconciliation step
+# (which removes graph nodes for wiki pages no longer on disk). Reconciliation
+# runs by default on incremental updates; set this to disable it permanently.
+# Equivalent to passing --skip-reconcile-deletions on the CLI every time.
+skip_reconcile_deletions = false

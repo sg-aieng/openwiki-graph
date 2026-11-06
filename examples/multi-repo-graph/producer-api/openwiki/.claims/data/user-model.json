@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:eb5db841a70758883f750034c12c3e80c0f36a545c01123fb8bf37147fc4b0b1",
+  "claims": [
+    {
+      "id": "claim_3d3f21c915874980bc0f0f64603bb953",
+      "statement": "User has six fields: id (Long, service-assigned), username (@NotBlank), email (@NotBlank + @Email), fullName (optional), createdAt (LocalDateTime, set on construction), and active (boolean, defaults true).",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/model/User.java#L8-L26",
+          "version": "repo-lines-v1:sha256:76bc642abccf4452b2908bebbdfa405abe9f33448c9c98b0f697287f68ae824c:eyJzZWxlY3RlZExpbmVDb3VudCI6MTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjliZmVhOGQxMDgxMzhlMmM1NGVlNzVkZjUzOGI3MTYyNGQ0MzY0MjkwNDc0ZmI0YjE5NGUyZjFhNDhhMjUwM2EiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImU0YmVmMjM0MjA3MzM3MjhjNzNiZGRmZmIwZjUxNjBhNjM0M2Q1MDhlMGNlNTFlYzcyYWJmM2UwNmFmYjZiMjkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjljYjM0ZTdiM2MyMTdiZDgzNDgyNWJjZDQ4MDhjOGI5NzcwNjE3ZWMzZGI2YTJkMDAyZWY2YzgwOTkyNmI4NGEiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImNkZDIyNmI4M2YwOTViYzAyMzRhMzA5MjQyZDE3YzE5ZDdkZThmNjdjYjUyNDNlMTYxMzdjOTI0Yzg3NGE2YWMifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_975490310f15460285b69c83653d1856",
+      "statement": "There is no server-side uniqueness check — duplicate usernames or emails are silently accepted.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L22-L26",
+          "version": "repo-lines-v1:sha256:0623667a95eecd44fb7a31fc2bdb4b0fe467d58ff6e4de597f8df48bea0e8da2:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ5NmUwMDg3NzM1Yzk1YmFlMjRlOGE3N2U2NTRmMWM4NGE2NjAzMGQ2YWY3ZTA3N2M4ZWMyOGQ3YWUwM2MxZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDU5NDRhYzNiNTM5MWJmYmU0NmM5NTc1NjA2OWMxNmY5OGE2YzQ2NzQ0MzBmYmMzZmNkMDNiMGFjNjUyNzFhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiY2U1YmZjNDUxZWY5Mzg1NDlkYTJjNGEwNzI2OThjNzY5MDYzYTU0NTY1YmI5YWEyMWQ2Y2ZmMmI3ZTUzOGE2ZCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_a762830346204e9aa254c1138d0136fc",
+      "statement": "The id argument passed to the User convenience constructor is always overwritten by UserService.createUser before the record is stored.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L22-L25",
+          "version": "repo-lines-v1:sha256:2cad68900807d917daf77512ee99b60926d2f010b434b2d0ac224d224170888c:eyJzZWxlY3RlZExpbmVDb3VudCI6NCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ5NmUwMDg3NzM1Yzk1YmFlMjRlOGE3N2U2NTRmMWM4NGE2NjAzMGQ2YWY3ZTA3N2M4ZWMyOGQ3YWUwM2MxZCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiM2UzNmMxOGNjMWU4Y2ZmMTQ0Y2Q5MTc3ZjBlMGEzNGUwNzhjNzJkMWFmMjJiZTJmYmUzYWYwM2JkZTM1YWY5OSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMDU5NDRhYzNiNTM5MWJmYmU0NmM5NTc1NjA2OWMxNmY5OGE2YzQ2NzQ0MzBmYmMzZmNkMDNiMGFjNjUyNzFhNiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiOTQ3NTNmODUwMTVhNzA2Y2JmYTM4NmQ0ZTMwMGUzMDg0MmI2M2RiODFhODZjYWYyYjlkZjQxZWI1NDEwM2E2OCJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_85f2ff998b1045fc92fc1d5278d1df6b",
+      "statement": "IDs are assigned by an AtomicLong starting at 1 and are never reused after deletion.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L14-L14",
+          "version": "repo-lines-v1:sha256:90cbd12e42b681863db4121abf569b30224fbb33a0486e820dddac81e856993a:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBjYmQxMmU0MmI2ODE4NjNkYjQxMjFhYmY1NjliMzAyMjRmYmIzM2EwNDg2ZTgyMGRkZGFjODFlODU2OTkzYSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTBjYmQxMmU0MmI2ODE4NjNkYjQxMjFhYmY1NjliMzAyMjRmYmIzM2EwNDg2ZTgyMGRkZGFjODFlODU2OTkzYSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiMjNmNmJjZDUyN2FhMWZlZDJhYmIyMmUxMjY4Yjk0MTBkNWJiNzE5NmMzMmJlMTQ4NDNjZWIwZjRkZTk0NWZiZiIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiMzQ5ZGEzZmJjMGZlZGM1M2FkN2ZjZjYzNGJhZGYzNDAxNmNkOGQ3NTA3ZDZjZWZlOTAwYzdjOWZjNTE0YmI1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_2ae05dd241b14a52a97350029df95b46",
+      "statement": "User objects are stored directly in the ConcurrentHashMap with no serialisation or durability; all records are lost on process restart.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L13-L13",
+          "version": "repo-lines-v1:sha256:933c1a68efea05f0eed5f6068dc3b693a01f627d1d6aa1eef0ec58f0506a56e8:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOTMzYzFhNjhlZmVhMDVmMGVlZDVmNjA2OGRjM2I2OTNhMDFmNjI3ZDFkNmFhMWVlZjBlYzU4ZjA1MDZhNTZlOCIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiOTMzYzFhNjhlZmVhMDVmMGVlZDVmNjA2OGRjM2I2OTNhMDFmNjI3ZDFkNmFhMWVlZjBlYzU4ZjA1MDZhNTZlOCIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZDhhZGJjYTZlMGQxN2NiMDkyMDcwODQ4NGFhMzBhM2IwMmM1MDM3YWE0YmMyZTY1OTMzZDQzYWRiNDJmY2VhNyIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZGNkNTczOWI4YzRkNTQwODcxMjFhNWY5NGRjZTliMmQzMDliM2ZiNDgyNWY2YzNhYmZmZmUwOGFmM2JiNDgwYyJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-02T03:32:07.279Z"
+  }
+}

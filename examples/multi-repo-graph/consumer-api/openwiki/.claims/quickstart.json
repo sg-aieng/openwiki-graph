@@ -1,0 +1,68 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:f6b81c8fdca9d45dd8cb60f5ac202ad9af8dbe035048321a68a9b6fab4a0306a",
+  "claims": [
+    {
+      "id": "claim_d570fe7d48f9445cbffe13834c9ebec8",
+      "statement": "The consumer is a Spring Boot 3.2 application built with Java 17 and Maven, and it starts from `com.example.consumer.ConsumerApplication`.",
+      "evidence": [
+        {
+          "resource": "repo://pom.xml#L1-L53",
+          "version": "repo-lines-v1:sha256:87b0b59392eea2c05317bd13a6c2fb3de090e3348eac5b92fd86075a7a3aef52:eyJzZWxlY3RlZExpbmVDb3VudCI6NTMsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjBlYjY0MWRjY2YxMDYwY2Y4MjgzMTc3OGFiMDRiMjcwYjk3YjI0NzgwZDA4OTVkNWIwMGQ0ZWIyMTdmYzhhMWQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjI2ZTMyYTMwZjNmMjBiYmM4MmY1YzUzZDQ4MDg4M2RhODk0OWQwYWJhYTllZGQwNWFkMzJjZDdhYzRlMjc5ZTciLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/ConsumerApplication.java#L1-L18",
+          "version": "repo-lines-v1:sha256:85859f6790ccb3554ea1569b69b7c75992546b0276e4f6bfa59dc913044dac6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NmMxYzQ0ZjQ5YjgyNWRjNTc4YmY3Y2QyMWE5YmZlMTBkOTk0NTk0MjdjZGFiMmM2Njk3MGQwODEwNzY2YzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_cf806422680947bdb531fbd4d058d524",
+      "statement": "The consumer depends on the User API producer being available at `http://localhost:8080` by default, with the base URL configured in `src/main/resources/application.properties`.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L64",
+          "version": "repo-lines-v1:sha256:f9e7b165f3e0e112b3211cc0b6159a1d278187d1477c666a50e8e51fc5b0e180:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxNmY4Y2ZkNTdiMDNlYjM3NmNjNmI2MjM2NzBjMzcwYzA0MjYyYzc1YjI3NGM0OWUyYmVlZjgyMjA2MDRlMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkYmNjMDY5OGMyMjJiZTU3NDM2OTM4YzRkZmZmZGU2NTllODdkNzVlOGE0MDQ5YjU0NGI4NTAzNTRhZGU0ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L5",
+          "version": "repo-lines-v1:sha256:6e973357ea7577f53e669bae1168288d34ab598a6fa6b3447c74c6f652f20209:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGJjNzQ0YjQ1ZTBkMDBjODMyZWUzOGVhMzBiNTcyNTYyMmZmM2I3OTJjMmVjZmI2ZGUyNGQyZWFjM2Q4ZDc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxMzVjNWYxODRjZDQwMGNkNzBhODA2MThkMjAwNWViNTE3ZDE4ZjhmNTAxMWU3MzhiOTRiY2NiODVkNDA0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b8c1bf387fab429fa92d0cb200dd297c",
+      "statement": "The application registers a `RestTemplate` bean for outbound HTTP calls to the producer.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/ConsumerApplication.java#L1-L18",
+          "version": "repo-lines-v1:sha256:85859f6790ccb3554ea1569b69b7c75992546b0276e4f6bfa59dc913044dac6e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjA2NmMxYzQ0ZjQ5YjgyNWRjNTc4YmY3Y2QyMWE5YmZlMTBkOTk0NTk0MjdjZGFiMmM2Njk3MGQwODEwNzY2YzEiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_a3ea7a2e922b4e3f9f7b4cb6574b444c",
+      "statement": "The documented startup flow is to run `./mvnw clean install` and then `./mvnw spring-boot:run`.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L64",
+          "version": "repo-lines-v1:sha256:f9e7b165f3e0e112b3211cc0b6159a1d278187d1477c666a50e8e51fc5b0e180:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxNmY4Y2ZkNTdiMDNlYjM3NmNjNmI2MjM2NzBjMzcwYzA0MjYyYzc1YjI3NGM0OWUyYmVlZjgyMjA2MDRlMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkYmNjMDY5OGMyMjJiZTU3NDM2OTM4YzRkZmZmZGU2NTllODdkNzVlOGE0MDQ5YjU0NGI4NTAzNTRhZGU0ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_ebe999493600432e99c28194c0f03e04",
+      "statement": "When the consumer starts, it is intended to execute its demo flow automatically and print results to the console.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L1-L64",
+          "version": "repo-lines-v1:sha256:f9e7b165f3e0e112b3211cc0b6159a1d278187d1477c666a50e8e51fc5b0e180:eyJzZWxlY3RlZExpbmVDb3VudCI6NjQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjYxNmY4Y2ZkNTdiMDNlYjM3NmNjNmI2MjM2NzBjMzcwYzA0MjYyYzc1YjI3NGM0OWUyYmVlZjgyMjA2MDRlMzYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjJkYmNjMDY5OGMyMjJiZTU3NDM2OTM4YzRkZmZmZGU2NTllODdkNzVlOGE0MDQ5YjU0NGI4NTAzNTRhZGU0ZDUiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjowLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.3",
+    "at": "2026-11-04T17:34:57.507Z"
+  }
+}

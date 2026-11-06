@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:9feccc1540d5f428121d1d2a1da541fcfd9267b9009469959fbd65d1dd628cfb",
+  "claims": [
+    {
+      "id": "claim_1646aec8e5cd4fd28eb9937af5262210",
+      "statement": "The service starts on port 8080 and can be launched with ./mvnw spring-boot:run or as a fat JAR.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L7-L11",
+          "version": "repo-lines-v1:sha256:6adebd3ddb11ade8b7d380bbe423021b36b3432e740f99e465516efd27a5acd8:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNWRlMmY1MzI4ZWU2ZTgwNTBlOGFhZmQ4ZGM4NjlhMDY5Y2Q5NTg0ZWRhYWY1NGZlNTg5ZDczYzNiN2RjZDc5OSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMDFiYTQ3MTljODBiNmZlOTExYjA5MWE3YzA1MTI0YjY0ZWVlY2U5NjRlMDljMDU4ZWY4Zjk4MDVkYWNhNTQ2YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZmNiNzUxMWQ1NTNhMmE5OTM3NDYyNzhiODhmNWFlNjk5MWRiOThlOGJiMTNkOTNjMDBiOTZhZGU1MDMyYWRmOSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNzNjYWNmZTkwODhjMjYwODViMTU1YmMxM2U4YTA2ZDE1ZjY3NTNkNTA5NzUxNGYwOTZiYTgxNjI4ZmFiZGQ1ZCJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L1",
+          "version": "repo-lines-v1:sha256:31efeb783903a3a459a07f0fc59c900bc2f77a49297e5f4cadf89d7e1fc7fc16:eyJzZWxlY3RlZExpbmVDb3VudCI6MSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMzFlZmViNzgzOTAzYTNhNDU5YTA3ZjBmYzU5YzkwMGJjMmY3N2E0OTI5N2U1ZjRjYWRmODlkN2UxZmM3ZmMxNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiMzFlZmViNzgzOTAzYTNhNDU5YTA3ZjBmYzU5YzkwMGJjMmY3N2E0OTI5N2U1ZjRjYWRmODlkN2UxZmM3ZmMxNiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZWI1ZTMyYzQzMGI2ZmE1MWZhYmQzN2VhOGViY2Y1ZDk2ZjQzYjI5NTU2ZTQ5M2E2MjBlNTI3NTZkOGI0NmQwYyJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_b70486b4fbc64f6aaf693c9d88d48929",
+      "statement": "Three seed users (admin, john_doe, jane_smith) are created automatically on every cold start and are not persisted across restarts.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/userapi/service/UserService.java#L16-L20",
+          "version": "repo-lines-v1:sha256:df9c17a954d526f7122ed485202d7db61ef2d1fd8d32826c83e7c394b7af4822:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWNlOTNiNmU0N2QzNTZiNjE4NDgwZDZlMWJiNjNjNmRmNTRhNTYyOTJhMTkwZGIyMjZmODg5MjAzZjE3NWNiZSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiNDg5M2Y0MGUzNzgxZWI4OTZjODJkMDQ2YTA4MDY3YTExZTM1Y2RmMmYxZGZhZjI2ZmVhOTBiOGRiNjY3NjQxMyIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiYTAzYjQ1YjhiNjNhMDAzY2VkYzhhZDhiYTRjMzZhMDY1ZTYxZGMxMjE0OWNiYWFkZGZkOTMwZDVkOThjNGE3ZSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiYzIyODhmMGM0Y2FiNmVkNzFhMmQwNGJmNDJkYjBmMWE0N2U4Mzg5ZTAyOTkyNDM1NGNjYjZkMmY3ZDE1ZTZlNCJ9"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-02T03:32:07.279Z"
+  }
+}

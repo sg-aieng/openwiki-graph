@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "pages": {
+    "/openwiki/api/endpoints.md": {
+      "pageVersion": "sha256:a35cf9ee3c5cd9f2283c58bb12b52b5427cc363ce94be767424d7c10cc7e055c",
+      "completedBy": "claude-code",
+      "completedRunId": "f6a6be43-6241-4c8b-9a80-44af2d81e182",
+      "gitHead": "9e5d61a5d5995a48a103c7c0b34533e1f74fe910",
+      "sourceFingerprint": "sha256:0f7be21c521b4ba93cd0bf741440336cbf9a28761e57cc29e226512d30256bdb"
+    },
+    "/openwiki/architecture/overview.md": {
+      "pageVersion": "sha256:99b01bee5429edbf9917f3b082f277bfbe319cc0ed27182b3cfbcf5acf976464",
+      "completedBy": "claude-code",
+      "completedRunId": "f6a6be43-6241-4c8b-9a80-44af2d81e182",
+      "gitHead": "9e5d61a5d5995a48a103c7c0b34533e1f74fe910",
+      "sourceFingerprint": "sha256:0f7be21c521b4ba93cd0bf741440336cbf9a28761e57cc29e226512d30256bdb"
+    },
+    "/openwiki/data/user-model.md": {
+      "pageVersion": "sha256:eb5db841a70758883f750034c12c3e80c0f36a545c01123fb8bf37147fc4b0b1",
+      "completedBy": "claude-code",
+      "completedRunId": "f6a6be43-6241-4c8b-9a80-44af2d81e182",
+      "gitHead": "9e5d61a5d5995a48a103c7c0b34533e1f74fe910",
+      "sourceFingerprint": "sha256:0f7be21c521b4ba93cd0bf741440336cbf9a28761e57cc29e226512d30256bdb"
+    },
+    "/openwiki/quickstart.md": {
+      "pageVersion": "sha256:9feccc1540d5f428121d1d2a1da541fcfd9267b9009469959fbd65d1dd628cfb",
+      "completedBy": "claude-code",
+      "completedRunId": "f6a6be43-6241-4c8b-9a80-44af2d81e182",
+      "gitHead": "9e5d61a5d5995a48a103c7c0b34533e1f74fe910",
+      "sourceFingerprint": "sha256:0f7be21c521b4ba93cd0bf741440336cbf9a28761e57cc29e226512d30256bdb"
+    }
+  }
+}

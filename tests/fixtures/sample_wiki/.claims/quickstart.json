@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:abc123",
+  "claims": [
+    {
+      "id": "claim_test001",
+      "statement": "The service starts on port 8080.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L1",
+          "version": "repo-lines-v1:sha256:abc"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.2",
+    "at": "2026-11-02T00:00:00.000Z"
+  }
+}

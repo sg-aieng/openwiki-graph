@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:be8ce60a1e6206648d8e787cf85811b989951051fd943f61e3fcecdd977e440a",
+  "claims": [
+    {
+      "id": "claim_af2b5a2ae49d4d94a89e79d3187c3792",
+      "statement": "The consumer is a Spring Boot 3.2.0 application built with Maven and configured to run on Java 17.",
+      "evidence": [
+        {
+          "resource": "repo://pom.xml#L8-L33",
+          "version": "repo-lines-v1:sha256:6715f388203babd011bfc9d06ac0e090729bbfec128bb2fb8ec90b097c889c3f:eyJzZWxlY3RlZExpbmVDb3VudCI6MjYsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImI0Nzc1YzEyZDcwZjE5NDUxNzU2MThiMjA5ZTExNzQyZDE2OTNjNjI2Mjk4Y2Q2NTU4MWFkMjA1YmJmYWZkMDMiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMxNWU3NmRjNzEwODgzYmVlMDYwYjFhZDZiNTllYWQ5NDhmNDJiZmRiN2VhNWI4ZGI1ZDMwZDM1ZWEwZDBkYjIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhM2Y2MzkyM2E5ODJlZDczNDBmODIwODFlMmQ1YTI0YzEyZTUyNzc1YzEyNzU0MzZlYzNiYTI2MzcxMGZhNGYiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjVjNmI4ZDAwYjJkOTAyNDlkYzg5MGNjNTU0ZTg2ODEzNTkzZDhkNTJmN2NkZTQ0Y2EyZGY4NjMyNGFkZDg0ZGYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_1cd6f7fdc05d4099b620d7d279c23056",
+      "statement": "The application defines a `RestTemplate` bean and starts from `ConsumerApplication.main(...)`, so Spring Boot bootstraps the context and wires the HTTP client at startup.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/ConsumerApplication.java#L7-L18",
+          "version": "repo-lines-v1:sha256:983873ff9bdecef70c5862f7a7af15116aecec37f6564417f36b1ace80d3cb63:eyJzZWxlY3RlZExpbmVDb3VudCI6MTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjJiZWFmNWQxMTdhMzA5ODQyZjg0MmMxZTg0NGRmZTQ5ZWQ3YzE4ZDRkMjlkMjNlM2Q1NGE3YmRkMzcwYWY4ZDciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_01101b6ea80c4e80b236b9216020ccec",
+      "statement": "The consumer reads its outbound base URL from the `user.api.base-url` property, which defaults to `http://localhost:8080` in `application.properties`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L15-L20",
+          "version": "repo-lines-v1:sha256:26fe090c89ca87d62f551b780821b243e0c259b28b0fd8e49a83cf15ec011717:eyJzZWxlY3RlZExpbmVDb3VudCI6NiwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiMWNkMTZhNDcwZjViZDRmMDBhNGVlYjk1ZjI3MmRjNWI1ZDdmZjFhM2M1YWU4MWRkZjdjNjE3ODhkN2ExODVlNiIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiZWZhNTY3Mjc5NjUyZWVlNDAxODgyYmVkYmY0Nzc4YzU2YjUwZjY1ZTc5MjcxZGRjNzYxZGEyYTQ4MDVhMDk5YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiY2QwZGZiYzQyNWE4OTkxMmQ3Nzk2YThiZDY0YzZlZTI0Y2RmMWQzYTQwMmY3ZWQwZjNjNzZkMzgzZWNkNWQ3OSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiNTMwMDcwNDY2Nzg1ZGM4NDI4MzdkNTE3NGQ1ZjM1ZWVkNDVjYzk4MTg2NDQ3MWI1MGFmNGQ4NDJhZjEwZGE3NSJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L5",
+          "version": "repo-lines-v1:sha256:6e973357ea7577f53e669bae1168288d34ab598a6fa6b3447c74c6f652f20209:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGJjNzQ0YjQ1ZTBkMDBjODMyZWUzOGVhMzBiNTcyNTYyMmZmM2I3OTJjMmVjZmI2ZGUyNGQyZWFjM2Q4ZDc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxMzVjNWYxODRjZDQwMGNkNzBhODA2MThkMjAwNWViNTE3ZDE4ZjhmNTAxMWU3MzhiOTRiY2NiODVkNDA0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_3be228dd1adf4da28bc690aa76172aaa",
+      "statement": "The README and source both indicate that the User API producer must be running at the configured base URL before the consumer starts.",
+      "evidence": [
+        {
+          "resource": "repo://README.md#L5-L12",
+          "version": "repo-lines-v1:sha256:24cbc357678af06917df081158be982bbcc005384aa332ec5748f722dd82c4f4:eyJzZWxlY3RlZExpbmVDb3VudCI6OCwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiOWQ4ZmVmZGY0MjlkMDg5NzkzNGYzMDZlMmJhYjM5ZDFiNmJlMjdjYWEzNmY4MzRhYjNhYWQ2YzNlY2U5OTc2MyIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2Q5ZDdmMDNkMjRmMjg4YmU3YjExZGM5MTNmM2Q1YWExYTAxYWY5MjA5ODUxYmZmNjFhNzRmYjg2ZmM3MTU0YiIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjMsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiM2UxNjI2MmZmYTgwZWJiOTA1ODIyZDBjMjc2ZWEyODY4OGQ0ZTNiOTdhNDlhZGMwZWMxZWY5ZTY0Y2UzNDNkZCIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjMsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiM2FhN2NmOWY3OTNiYTQ2ZmFmNTVjOTQxYWRhYTkyMDM0ZDM2ZTc1YWQ4Y2FhZjYyMGRiMGM3N2FmMDQ3OTY0NiJ9"
+        },
+        {
+          "resource": "repo://src/main/resources/application.properties#L1-L5",
+          "version": "repo-lines-v1:sha256:6e973357ea7577f53e669bae1168288d34ab598a6fa6b3447c74c6f652f20209:eyJzZWxlY3RlZExpbmVDb3VudCI6NSwiZmlyc3RTZWxlY3RlZExpbmVIYXNoIjoiNGJjNzQ0YjQ1ZTBkMDBjODMyZWUzOGVhMzBiNTcyNTYyMmZmM2I3OTJjMmVjZmI2ZGUyNGQyZWFjM2Q4ZDc2YSIsImxhc3RTZWxlY3RlZExpbmVIYXNoIjoiN2UxMzVjNWYxODRjZDQwMGNkNzBhODA2MThkMjAwNWViNTE3ZDE4ZjhmNTAxMWU3MzhiOTRiY2NiODVkNDA0MSIsInByZWNlZGluZ0NvbnRleHRMaW5lQ291bnQiOjAsInByZWNlZGluZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSIsImZvbGxvd2luZ0NvbnRleHRMaW5lQ291bnQiOjAsImZvbGxvd2luZ0NvbnRleHRIYXNoIjoiZTNiMGM0NDI5OGZjMWMxNDlhZmJmNGM4OTk2ZmI5MjQyN2FlNDFlNDY0OWI5MzRjYTQ5NTk5MWI3ODUyYjg1NSJ9"
+        }
+      ]
+    },
+    {
+      "id": "claim_c41c6d40d7da4f5dab9ac47aa423b40c",
+      "statement": "`DemoRunner` is a `CommandLineRunner`, so the consumer immediately runs its demo sequence on startup instead of waiting for an external request.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L8-L59",
+          "version": "repo-lines-v1:sha256:c31b5e20e2dd4332b43fa2856491a35f3da602a26b69d30693e462a32231cbf7:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4ZmExZTlmNDQ5NDlmYTg5YTNiNDJiMDQ5MmRkYmRmZmEyZWI3NjQ4NDhkMzU3NzhjOWZiNTNjMjA3ZWJkYmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmNzZmZDM2ZmJkNTY4ZjcyMjJiYTU1NzZhYjNkMGJkMmRlMzgwYzU5YjA3ZTg1ZjdlNjdkZGM3OGE5MzA3ZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_9ab7d68b8e084895ba8b78fc946c28d3",
+      "statement": "On startup, the demo sequence exercises list, read, create, update, deactivate, activate, filtered display, and active-count operations against the User API through `UserManagementService`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L16-L59",
+          "version": "repo-lines-v1:sha256:a133284a7c24f92c43a694d9b06f4d00add27c49241481946baad4375d2feac8:eyJzZWxlY3RlZExpbmVDb3VudCI6NDQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImVkYzJiMzExYWJlODc1NzJlOGE3Y2MwZDk5NmE2NTg0NDA3NmU1MjMyZDIxYjdhODU0NzVmOWI0MDU1Yjc0OTIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdhODg1ODdhYjUyN2Q4OTBhOTFhZGQzYjRhYzk3NTVlYjc0ZTJmYTFhMDEyMjIxZmUyMTg4MmZhOTc2MzUyNTIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L13-L86",
+          "version": "repo-lines-v1:sha256:3fbe13e60b4cbf61f2073841406542965104c2d0b1324605c5318cb19dd35cd2:eyJzZWxlY3RlZExpbmVDb3VudCI6NzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijg3NTYwNjBlNDc0NTVjYjQyODFjZDY2ZDQzNWRiYWY4MDY0Mjc1ZDQ5OGMwZDAxZDM1NTg5ZDczMTM0M2MyNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_81cf380afa1a4377a6bc122f467a1541",
+      "statement": "The consumer's main observable failure modes are missing `user.api.base-url` configuration, connection failures to the producer, and deserialization or HTTP errors during the startup demo calls.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L15-L92",
+          "version": "repo-lines-v1:sha256:84e80a8d56dac02d6416c422ec342c72ea61205edb74dcdebd51a2efdfe0b4e4:eyJzZWxlY3RlZExpbmVDb3VudCI6NzgsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjFjZDE2YTQ3MGY1YmQ0ZjAwYTRlZWI5NWYyNzJkYzViNWQ3ZmYxYTNjNWFlODFkZGY3YzYxNzg4ZDdhMTg1ZTYiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6ImNkMGRmYmM0MjVhODk5MTJkNzc5NmE4YmQ2NGM2ZWUyNGNkZjFkM2E0MDJmN2VkMGYzYzc2ZDM4M2VjZDVkNzkiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L8-L59",
+          "version": "repo-lines-v1:sha256:c31b5e20e2dd4332b43fa2856491a35f3da602a26b69d30693e462a32231cbf7:eyJzZWxlY3RlZExpbmVDb3VudCI6NTIsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImY4ZmExZTlmNDQ5NDlmYTg5YTNiNDJiMDQ5MmRkYmRmZmEyZWI3NjQ4NDhkMzU3NzhjOWZiNTNjMjA3ZWJkYmQiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjhmNzZmZDM2ZmJkNTY4ZjcyMjJiYTU1NzZhYjNkMGJkMmRlMzgwYzU5YjA3ZTg1ZjdlNjdkZGM3OGE5MzA3ZjQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.3",
+    "at": "2026-11-04T17:34:57.507Z"
+  }
+}

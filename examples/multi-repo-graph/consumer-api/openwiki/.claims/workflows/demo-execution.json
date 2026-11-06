@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "pageVersion": "sha256:3f518da86f2045c5b9a8f5948b68cdc39c83c548f911a1158c9f65cd6c250014",
+  "claims": [
+    {
+      "id": "claim_0bf3017980cd47b3ab5034017f179696",
+      "statement": "`DemoRunner` executes automatically after Spring Boot finishes initializing the application context because it implements `CommandLineRunner`.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L7-L17",
+          "version": "repo-lines-v1:sha256:327075a726ce72f42a1e1039fb6aec8c851e803edb1a2f9ee5b4cb7ecc93dc7e:eyJzZWxlY3RlZExpbmVDb3VudCI6MTEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ3ZjVkZDJhNjVhNzY4YTI3MjJmMmJjYTM1YTBjZThhODAwMmZiZTA3ODcwMDIzOTRjMGQzMDg0MjQ0NzJjYzMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjNjYmY0ZWY0ODUxMTRlOGEyZDI3YTg3YzE5YTFiNDZlNjg0MDQ4NzUzNmYwODY2ZTM2NGNlYmQ4ODg0NjQ4MTUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjU0ZDk0ZTA3NjIyNWQ0YjhhNGZmOWIyYTI5ZTYyNWNjMWRmNDI5OGU5NDViZjI3YTVlOWRjOTYzZTQ4YzU0YjAifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_4bbbcb38d7654f3ba182f190d179ae47",
+      "statement": "The startup demo follows a fixed order: banner, all users, active users, user by id 1, user by username `john_doe`, create user, conditional update/deactivate/activate for the created user, domain-filtered emails, active-user count, and closing banner.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L19-L52",
+          "version": "repo-lines-v1:sha256:0f38e5caef782b1c22e3d5ec13bbbc8c72be8a0d743c85a1ec8b67538e7b9e8a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZDE3N2VmNzI3YjNhODhmNjM2MjFhMzhkODIyOTNmZTFjYmI5ZjlmMjFkYzNlMTRkMjRkMjA3MWVlMTgxMzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlNTk4ODdjMjBiOGIyMzQzMDBmZDRjZTRhYTMyNmU3YjRiYTk2MDZlNTZiZDg0ZGEwNTk2ZGFlMGVlZTBlMTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3MTUyNzAwOGJjYjU1MGU4YjhlM2FkZjlhNGM5ZTQwMDk5ODZjZTk2NjM5ZTA4N2UzODI2YjU3NDQ4OGFjMzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhZTc3ODc4NDc3YWMwMTg4ZDhiOTE5NjU4MTFlNWM4YjZjYmMzMTJmZDI2ZjU1YTk1OGU1NTk0ODkyYmJkMzEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_42efb9ddae174186a08411921df72358",
+      "statement": "The update, deactivate, and activate steps only run when the created user is non-null and has a non-null id.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L30-L43",
+          "version": "repo-lines-v1:sha256:394737a2ab24a1839acaf0ddb9f0c95e38d53326925bdf2b74116ac8413470b4:eyJzZWxlY3RlZExpbmVDb3VudCI6MTQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjVkNzQ1YWJmMDBlNjcyZDA2ZDM5OGIxNGY1MzU5MmRmMWM2ZWI2YWJlY2MyYzhhYjJmMmQ5NzczNzUyNmM5YzAiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjVhN2FkNDQ4NDJiNWJhNWUyZTNiZmRmZDFkYWMwNzQ3OWRjMmEzMzIzNTZkMWZmYjZhN2E0MjBiMWRmYTFhNzciLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImRjZTE4YWVlYTk3ZmZiNTYzNzA2NzJhMGRhOTg1MWJjOTZiODM5NGVlMmQ2YWU3MzBjMjBlZmEwNmI2ZDc5MWYifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_03e8050566574e75a2d59c5a662cbe8f",
+      "statement": "`UserManagementService` is responsible for console section headers, delegating remote user operations, and small local transformations such as creating request objects, filtering emails by domain, and counting active users.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L11-L85",
+          "version": "repo-lines-v1:sha256:49a6d249ae9ada00e1e598e3e72fedf2678d99912aed0e450c213ce88d176dfa:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5YjAxNGM2YWE1YjJiMmEyMzczMjkwYTI4ZDQzZTQ4ODUyNjczYTJjZTBlMGMxYTBjYzM4YmRmN2IzMWI2MTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4YTA5Mzk0Y2Y5ZjVkNjVjYmU5NWI4Yjg0NTMyYWVkZjk5MzJkNmY5ZDI4NGZkYTY4YmI2NTkyNjE2ZGQwNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_c145796a79aa425baab3d1df7550775e",
+      "statement": "`UserApiClient` is a thin outbound HTTP client that reads `user.api.base-url` and maps each user operation to a fixed `/api/users` endpoint on the external producer.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L12-L92",
+          "version": "repo-lines-v1:sha256:e78ad2f6b940867852afbd89d6f9cdbcf9097198950db8168e469d311b28e0ff:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlmZThjMGVhZmY1ZGI5YmQzNGRjYTZhMmZiM2YwYWU3YTZlOTNkM2I0YzQ4ZmU2NjAwOWI4YzZkN2YzZWZjNjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_509211e88e9f47f59c45391f2415c233",
+      "statement": "The demo depends on a reachable User API producer at startup; failures in connectivity, configuration, or response shape can interrupt the launch-time demo sequence.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/client/UserApiClient.java#L12-L92",
+          "version": "repo-lines-v1:sha256:e78ad2f6b940867852afbd89d6f9cdbcf9097198950db8168e469d311b28e0ff:eyJzZWxlY3RlZExpbmVDb3VudCI6ODEsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjAxYmE0NzE5YzgwYjZmZTkxMWIwOTFhN2MwNTEyNGI2NGVlZWNlOTY0ZTA5YzA1OGVmOGY5ODA1ZGFjYTU0NmIiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjlmZThjMGVhZmY1ZGI5YmQzNGRjYTZhMmZiM2YwYWU3YTZlOTNkM2I0YzQ4ZmU2NjAwOWI4YzZkN2YzZWZjNjUiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjowLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImUzYjBjNDQyOThmYzFjMTQ5YWZiZjRjODk5NmZiOTI0MjdhZTQxZTQ2NDliOTM0Y2E0OTU5OTFiNzg1MmI4NTUifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L19-L52",
+          "version": "repo-lines-v1:sha256:0f38e5caef782b1c22e3d5ec13bbbc8c72be8a0d743c85a1ec8b67538e7b9e8a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZDE3N2VmNzI3YjNhODhmNjM2MjFhMzhkODIyOTNmZTFjYmI5ZjlmMjFkYzNlMTRkMjRkMjA3MWVlMTgxMzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlNTk4ODdjMjBiOGIyMzQzMDBmZDRjZTRhYTMyNmU3YjRiYTk2MDZlNTZiZDg0ZGEwNTk2ZGFlMGVlZTBlMTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3MTUyNzAwOGJjYjU1MGU4YjhlM2FkZjlhNGM5ZTQwMDk5ODZjZTk2NjM5ZTA4N2UzODI2YjU3NDQ4OGFjMzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhZTc3ODc4NDc3YWMwMTg4ZDhiOTE5NjU4MTFlNWM4YjZjYmMzMTJmZDI2ZjU1YTk1OGU1NTk0ODkyYmJkMzEifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L11-L85",
+          "version": "repo-lines-v1:sha256:49a6d249ae9ada00e1e598e3e72fedf2678d99912aed0e450c213ce88d176dfa:eyJzZWxlY3RlZExpbmVDb3VudCI6NzUsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImM5YjAxNGM2YWE1YjJiMmEyMzczMjkwYTI4ZDQzZTQ4ODUyNjczYTJjZTBlMGMxYTBjYzM4YmRmN2IzMWI2MTUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6Ijk4YTA5Mzk0Y2Y5ZjVkNjVjYmU5NWI4Yjg0NTMyYWVkZjk5MzJkNmY5ZDI4NGZkYTY4YmI2NTkyNjE2ZGQwNTQiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjoxLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjQxMmNhMzQ1Y2NmNzViZjljMDgwNmJjZTY5NWJlOGRlODA4Yjc5OTg0MjUxYTdhNTRkMjAyY2Y2MTAxZGQ0NTEifQ"
+        }
+      ]
+    },
+    {
+      "id": "claim_88a246df32cf43df8887252322cb06e1",
+      "statement": "The demo emits its behavior through standard output, including startup and shutdown banners, section headers, printed user objects, confirmation lines for mutations, derived email summaries, and the active-user count.",
+      "evidence": [
+        {
+          "resource": "repo://src/main/java/com/example/consumer/runner/DemoRunner.java#L19-L52",
+          "version": "repo-lines-v1:sha256:0f38e5caef782b1c22e3d5ec13bbbc8c72be8a0d743c85a1ec8b67538e7b9e8a:eyJzZWxlY3RlZExpbmVDb3VudCI6MzQsImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6ImMyZDE3N2VmNzI3YjNhODhmNjM2MjFhMzhkODIyOTNmZTFjYmI5ZjlmMjFkYzNlMTRkMjRkMjA3MWVlMTgxMzgiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6ImZlNTk4ODdjMjBiOGIyMzQzMDBmZDRjZTRhYTMyNmU3YjRiYTk2MDZlNTZiZDg0ZGEwNTk2ZGFlMGVlZTBlMTkiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjA3MTUyNzAwOGJjYjU1MGU4YjhlM2FkZjlhNGM5ZTQwMDk5ODZjZTk2NjM5ZTA4N2UzODI2YjU3NDQ4OGFjMzIiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6ImFhZTc3ODc4NDc3YWMwMTg4ZDhiOTE5NjU4MTFlNWM4YjZjYmMzMTJmZDI2ZjU1YTk1OGU1NTk0ODkyYmJkMzEifQ"
+        },
+        {
+          "resource": "repo://src/main/java/com/example/consumer/service/UserManagementService.java#L15-L73",
+          "version": "repo-lines-v1:sha256:ae2ebb1e37b31c1ff85541d11d244f2a94202dd23be535b4d46c11115e81400b:eyJzZWxlY3RlZExpbmVDb3VudCI6NTksImZpcnN0U2VsZWN0ZWRMaW5lSGFzaCI6IjY3MjdmN2I3NGY3NDQxMWZhZjQ2ZTU1Zjk3NmY0MjM2MWE4ODg2OWY5N2IwZjBhYWNkNDUxNTk2ZDFhMjI0NDUiLCJsYXN0U2VsZWN0ZWRMaW5lSGFzaCI6IjQ4OTNmNDBlMzc4MWViODk2YzgyZDA0NmEwODA2N2ExMWUzNWNkZjJmMWRmYWYyNmZlYTkwYjhkYjY2NzY0MTMiLCJwcmVjZWRpbmdDb250ZXh0TGluZUNvdW50IjozLCJwcmVjZWRpbmdDb250ZXh0SGFzaCI6IjdiZTA0OTBlNTNhZTg3Y2E2YmNhZDVjODQzMTQyNWVlYzdmZmUxY2FmOTc3MjBkYTRmYjhlN2JjYTdkODIyYjAiLCJmb2xsb3dpbmdDb250ZXh0TGluZUNvdW50IjozLCJmb2xsb3dpbmdDb250ZXh0SGFzaCI6IjFmNGM4MDhkODk4YzVmODNlZjYyYTMyYzRmMTE0OGY4ZTJlOTY1Yjg4NmM5NmMwM2YzN2U2N2E1NjE3NjBiNjYifQ"
+        }
+      ]
+    }
+  ],
+  "verification": {
+    "by": "openwiki/0.7.3",
+    "at": "2026-11-04T17:34:57.507Z"
+  }
+}
